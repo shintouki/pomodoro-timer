@@ -1,0 +1,87 @@
+body {
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  background-color: #252839;
+  color: white;
+}
+
+p {
+  margin: 0;
+}
+
+#title {
+  font-size: 225%;
+}
+
+.link {
+  text-decoration: none;
+  color: #33FFFF;
+}
+
+#author {
+  color: white;
+  margin-top: 50px;
+}
+
+button {
+  font-family: 'Cinzel', serif;
+  background-color: #b5b5b7;
+  border: solid 2px silver;
+}
+
+#timer {
+  height: 225px;
+  width: 225px;
+  font-size: 500%;
+  font-family: 'Cinzel', serif;
+  background-color: #677077;
+  border: solid 5px silver;
+  box-shadow: 0px 3px 5px 1px silver;
+  margin: 20px 0px 30px 0px;
+  border-radius: 50%;
+  padding: 1%;
+  outline: none;
+  color: white;
+}
+
+.duration_text {
+  margin-bottom: 5px;
+}
+
+#break_duration {
+  display: inline-block;
+  margin: 0 5px 0 5px;
+}
+
+#session_duration {
+  display: inline-block;
+  margin: 0 5px 0 5px;
+}
+
+#durations_divs {
+  display: inline-block;
+}
+
+#break_duration_div {
+  float: left;
+  margin-right: 10px;
+}
+
+#session_duration_div {
+  float: left;
+  margin-left: 10px;
+}
+
+#volume_buttons {
+  display: inline-block;
+}
+
+#volume_text {
+  display: inline-block;
+  margin-top: 25px;
+  margin-right: 5px;
+}
+
+#volume_level {
+  margin-bottom: 15px;
+}
