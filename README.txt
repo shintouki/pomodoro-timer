@@ -1,3 +1,4 @@
-A Pen created at CodePen.io. You can find this one at http://codepen.io/InstantMizu/pen/YWVNxw.
+Pomodoro Timer
 
+https://shintouki.github.io/pomodoro-timer/
  
