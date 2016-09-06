@@ -1,70 +1,45 @@
 <!DOCTYPE html>
-<html >
+<html>
   <head>
     <meta charset="UTF-8">
     <title>Pomodoro Timer</title>
-    
-    
-    
-    
-        <link rel="stylesheet" href="css/style.css">
-
-    
-    
-    
+    <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
   </head>
-
   <body>
-
-    <html>
-
-<head>
-  <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
-</head>
-
-<body>
-  <h1 id="title">Pomodoro Timer</h1>
-  <div id="durations_divs">
-    <div id="break_duration_div">
-      <p class="duration_text">Break Duration</p>
-      <button id="break_less_button">-</button>
-      <p id="break_duration">5</p>
-      <button id="break_more_button">+</button>
+    <h1 id="title">Pomodoro Timer</h1>
+    <div id="durations_divs">
+      <div id="break_duration_div">
+        <p class="duration_text">Break Duration</p>
+        <button id="break_less_button">-</button>
+        <p id="break_duration">5</p>
+        <button id="break_more_button">+</button>
+      </div>
+      <div id="session_duration_div">
+        <p class="duration_text">Session Duration</p>
+        <button id="session_less_button">-</button>
+        <p id="session_duration">25</p>
+        <button id="session_more_button">+</button>
+      </div>
     </div>
-    <div id="session_duration_div">
-      <p class="duration_text">Session Duration</p>
-      <button id="session_less_button">-</button>
-      <p id="session_duration">25</p>
-      <button id="session_more_button">+</button>
+    <div>
+      <button id="timer">25:00</button>
     </div>
-  </div>
-
-  <div>
-    <button id="timer">25:00</button>
-  </div>
-  <div>
-    <button id="break_button">Break</button>
-    <button id="reset_button">Reset</button>
-    <button id="session_button">Session</button>
-  </div>
-  <p id="volume_text">Volume</p>
-  <div id="volume_buttons">
-    <button id="lower_volume_button">-</button>
-    <button id="raise_volume_button">+</button>
-  </div>
-  <p id="volume_level">|||</p>
-  <button id="test_beep_button">Test Beep</button>
-  <p id="author">by <a href="https://github.com/shintouki" id="profileLink" class="link">Ted</a></p>
-</body>
-
-</html>
+    <div>
+      <button id="break_button">Break</button>
+      <button id="reset_button">Reset</button>
+      <button id="session_button">Session</button>
+    </div>
+    <p id="volume_text">Volume</p>
+    <div id="volume_buttons">
+      <button id="lower_volume_button">-</button>
+      <button id="raise_volume_button">+</button>
+    </div>
+    <p id="volume_level">|||</p>
+    <button id="test_beep_button">Test Beep</button>
+    <p id="author">by <a href="https://github.com/shintouki" id="profileLink" class="link">Ted</a></p>
     <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-<script src='http://cdn.rawgit.com/vpanga/MouseEventSimulatorWithTouch/master/src/jquery.mouse2touch.min.js'></script>
-
-        <script src="js/index.js"></script>
-
-    
-    
-    
+    <script src='http://cdn.rawgit.com/vpanga/MouseEventSimulatorWithTouch/master/src/jquery.mouse2touch.min.js'></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
