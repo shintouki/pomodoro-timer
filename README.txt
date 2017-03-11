@@ -1,6 +1,6 @@
 Pomodoro Timer
 
-https://shintouki.github.io/pomodoro-timer/
+https://tshin1.github.io/pomodoro-timer/
 
 Click on big circle with time to start the timer.
 Change break and session duration with - and +.
