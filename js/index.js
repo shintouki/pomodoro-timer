@@ -11,6 +11,7 @@ $(document).ready(function() {
   let mousedownIntervalDelay = 50;
   let mousedownTimeoutDelay = 500;
 
+  // Button that reduces break duration
   $("#break_less_button").click(function() {
     let breakDuration = parseInt($("#break_duration").text());
     if (!timerOn && breakDuration > 1) {
