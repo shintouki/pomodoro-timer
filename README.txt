@@ -1,6 +1,6 @@
 Pomodoro Timer
 
-https://tshin1.github.io/pomodoro-timer/
+https://tshin7.github.io/pomodoro-timer/
 
 Tech stack: jquery
 

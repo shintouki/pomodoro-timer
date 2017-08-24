@@ -11,7 +11,8 @@ $(document).ready(function() {
   let mousedownIntervalDelay = 50;
   let mousedownTimeoutDelay = 500;
 
-  // Button that reduces break duration
+  // Button that reduces break duration text.
+  // If on break, main timer text also decreases by 1.
   $("#break_less_button").click(function() {
     let breakDuration = parseInt($("#break_duration").text());
     if (!timerOn && breakDuration > 1) {
@@ -23,6 +24,7 @@ $(document).ready(function() {
     }
   });
 
+  // Button that increases break time.
   $("#break_more_button").click(function() {
     if (!timerOn) {
       let breakDuration = parseInt($("#break_duration").text());
@@ -34,6 +36,7 @@ $(document).ready(function() {
     }
   });
 
+  // Decrease session duration text by 1
   $("#session_less_button").click(function() {
     let sessionDuration = parseInt($("#session_duration").text());
     if (!timerOn && sessionDuration > 1) {
@@ -45,6 +48,7 @@ $(document).ready(function() {
     }
   });
 
+  // Increase session duration text by 1
   $("#session_more_button").click(function() {
     if (!timerOn) {
       let sessionDuration = parseInt($("#session_duration").text());
@@ -57,6 +61,8 @@ $(document).ready(function() {
   });
 
   // Hold down mouse click on - + buttons to quickly add or remove time
+  // mousedownTimeoutDelay is how long it takes for button press to start working.
+  // mousedownIntervalDelay is how fast the time increases or decreases.
   $("#break_less_button").mousedown(function() {
     buttonPressedTimeout = setTimeout(function() {
       buttonPressedInterval = setInterval(function() {
@@ -128,7 +134,7 @@ $(document).ready(function() {
     return false;
   });
 
-  // Clear timeout and interval when mousebutton is no longer held
+  // Clear timeout and interval when mousebutton is no longer held.
   $(document).mouseup(function() {
     clearInterval(buttonPressedInterval);
     clearInterval(buttonPressedTimeout);
@@ -136,10 +142,12 @@ $(document).ready(function() {
     return false;
   });
 
+  // Change timer button color when it is pressed.
   $("#timer").mousedown(function() {
     $("#timer").css("background-color", "	#f2b632");
   });
 
+  // Reset timer value to break or session duration.  
   $("#reset_button").click(function() {
     if (timerOn) {
       clearInterval(countdown);
@@ -152,6 +160,7 @@ $(document).ready(function() {
     }
   });
 
+  // Change to break
   $("#break_button").click(function() {
     if (timerOn) {
       clearInterval(countdown);
@@ -161,6 +170,7 @@ $(document).ready(function() {
     onBreak = true;
   });
 
+  // Change to session
   $("#session_button").click(function() {
     if (timerOn) {
       clearInterval(countdown);
@@ -199,6 +209,7 @@ $(document).ready(function() {
     }
   });
 
+  // Main timer button.
   $("#timer").mousedown(function() {
     if (timerOn) {
       clearInterval(countdown);
@@ -209,6 +220,8 @@ $(document).ready(function() {
     }
   })
 
+  // This uses string manipulation, but it might be better to store time
+  // values as integers instead.
   function decrementBySecond() {
     let currentTimeRemaining = $("#timer").text();
     let colonIndex = currentTimeRemaining.indexOf(":");
@@ -239,7 +252,7 @@ $(document).ready(function() {
         beepSelector();
         onBreak = true;
       }
-      // Turn countdown back on.
+      // Turn countdown back on since you changed to a new session or break.
       countdown = setInterval(decrementBySecond, 1000);
     }
   }
